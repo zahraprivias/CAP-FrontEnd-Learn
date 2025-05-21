@@ -1,7 +1,7 @@
 namespace com.win.bookstore;
 
-using {sap.common.CodeList} from '@sap/cds/common';
 using {com.win.bookstore as bs} from '../index';
+using {sap.common.CodeList} from '@sap/cds/common';
 
 
 type rating_enum : bs.rating enum {
@@ -17,5 +17,5 @@ entity status : CodeList {
         soldOut   = 'O';
         onSelling = 'A';
         Outdated  = 'X';
-    } default 'Outdated';
+    } default 'O';
 }
