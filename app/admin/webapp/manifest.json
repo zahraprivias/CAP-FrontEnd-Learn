@@ -74,28 +74,40 @@
                     "options": {
                         "settings": {
                             "entitySet": "Books",
-                            "navigation": {}
+                            "navigation": {},
+                            "content": {
+                                "header": {
+                                    "actions": {
+                                        "import_books": {
+                                            "press": "admin.ext.controller.importBooks.import",
+                                            "visible": true,
+                                            "enabled": true,
+                                            "text": "{i18n>importBooks}"
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
-        }
-    },
-    "sap.ui": {
-        "technology": "UI5",
-        "fullWidth": false,
-        "icons": {
-            "icon": "",
-            "favIcon": "",
-            "phone": "",
-            "phone@2": "",
-            "tablet": "",
-            "tablet@2": ""
         },
-        "deviceTypes": {
-            "desktop": true,
-            "tablet": true,
-            "phone": true
+        "sap.ui": {
+            "technology": "UI5",
+            "fullWidth": false,
+            "icons": {
+                "icon": "",
+                "favIcon": "",
+                "phone": "",
+                "phone@2": "",
+                "tablet": "",
+                "tablet@2": ""
+            },
+            "deviceTypes": {
+                "desktop": true,
+                "tablet": true,
+                "phone": true
+            }
         }
     }
 }
