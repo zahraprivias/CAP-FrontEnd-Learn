@@ -1,5 +1,6 @@
 using from '../../srv/books-service';
 using from '../ui/labels';
+using from '../../srv/browser-service';
 
 annotate BookService.Books with {
   ID    @UI.Hidden  @UI.HiddenFilter;
@@ -27,5 +28,17 @@ annotate BookService.Reviews with {
 };
 
 annotate BookService.Books.texts with {
+  descr @UI.MultiLineText: true;
+};
+
+annotate BrowserService.Books with {
+  ID     @UI.Hidden  @UI.HiddenFilter;
+  isbn   @Common.FieldControl : #ReadOnly;
+  descr  @UI.MultiLineText    : true;
+  price  @Measures.ISOCurrency: currency_code;
+  rating @readonly;
+};
+
+annotate BrowserService.Reviews with {
   descr @UI.MultiLineText: true;
 };

@@ -32,7 +32,7 @@ public class RatingCalculator {
     }
 
     public void setBookRating(String bookId) {
-        Result run = db.run(Select.from(BookService_.BOOKS, b -> b.filter(b.ID().eq(bookId)).review()));
+        Result run = db.run(Select.from(BookService_.BOOKS, b -> b.filter(b.ID().eq(bookId)).reviews()));
 
         Stream<Double> ratings = run.streamOf(Reviews.class).map(r -> r.getRating().doubleValue());
         BigDecimal rating = getAvgRating(ratings);

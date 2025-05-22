@@ -16,7 +16,7 @@ entity Books : cuid, managed {
     price        : bs.price;
     currency     : Currency;
     rating       : bs.rating;
-    review       : Association to many bs.Reviews on review.book = $self;
+    reviews      : Association to many bs.Reviews on reviews.book = $self;
     isReviewable : bs.Tech_Boolean not null default true;
     status: Association to bs.status @readonly;
 }

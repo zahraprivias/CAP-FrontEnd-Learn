@@ -21,7 +21,7 @@ import cds.gen.bookservice.BookService_;
 import cds.gen.bookservice.Books_;
 import cds.gen.bookservice.Reviews;
 import cds.gen.bookservice.Reviews_;
-import cds.gen.bookservice.Books;
+import cds.gen.com.win.bookstore.Books;
 
 @Component
 @ServiceName(BookService_.CDS_NAME)

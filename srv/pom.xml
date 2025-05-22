@@ -57,11 +57,11 @@
 		 </dependency>
 		 
 		<!-- https://mvnrepository.com/artifact/com.profesorfalken/jPowerShell -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.profesorfalken</groupId>
 			<artifactId>jPowerShell</artifactId>
 			<version>3.1.1</version>
-		</dependency>
+		</dependency> -->
 
 	</dependencies>
 
@@ -141,6 +141,7 @@
 								<command>build --for java</command>
 								<command>deploy --to sqlite --dry &gt; "${project.basedir}/src/main/resources/schema-sqlite.sql"</command>
 								<command>compile srv/books-service.cds -2 openapi --openapi:url /api/books &gt; "${project.basedir}/src/main/resources/swagger/openapi.json"</command>
+								<command>compile srv/browser-service.cds -2 openapi --openapi:url /api/browser &gt; "${project.basedir}/src/main/resources/swagger/browser-api.json"</command>
 							</commands>
 						</configuration>
 					</execution>
