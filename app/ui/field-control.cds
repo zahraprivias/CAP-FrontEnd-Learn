@@ -14,7 +14,7 @@ annotate BookService.Books with {
       TargetProperties: ['_it/rating'],
       TargetEntities  : [
         _it,
-        _it.review
+        _it.reviews
       ]
     },
     cds.odata.bindingparameter.name: '_it',
